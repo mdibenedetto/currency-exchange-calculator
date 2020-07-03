@@ -3,7 +3,7 @@ namespace CurrencyExchangeCalculator.Model
 { 
     public class CurrencyConverterResponse
     {
-        public decimal conversion;
+        public double conversion { get; set; }
 
         decimal amount;
         String baseCurrency;

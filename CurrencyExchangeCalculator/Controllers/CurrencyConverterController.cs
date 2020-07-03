@@ -18,27 +18,25 @@ namespace CurrencyExchangeCalculator.Controllers
         [HttpGet]
         //[Consumes("application/json")]
         [Produces("application/json")]
-        public CurrencyConverterResponse Get(
-            decimal amount,
+        public IActionResult Get(
+            double amount,
             String baseCurrency,
             String targetCurrency)
         {
             CurrencyManager converter = new CurrencyManager();
 
-            if(converter.ValidateInput(baseCurrency))
+            var errors = converter.ValidateInput(baseCurrency, targetCurrency);
+            if (errors.Count() == 0)
             {
                 CurrencyConverterResponse res = new CurrencyConverterResponse();
                 res.conversion = converter.Convert(amount, baseCurrency, targetCurrency);
                 return Ok(res);
-
             }
             else
-            {
-
+            {                
+                return BadRequest(errors); 
             }
-
-
-           
+                      
         }
 
 
