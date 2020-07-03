@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+
+html {
+  font-size: 16px;
+}
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #505562;
+  color: #fff;
+  display: grid;
+  justify-content: center;
+  align-items: baseline;
+  height: 100vh;
+}
+
+select {
+  width: 190px;
+}
+
+section > * {
+  padding: 5px;
+}
+
+section {
+  padding: 10px;
+}
+
+.container {
+  background-color: #516bad;
+}
+
+@media only screen and (max-device-width: 780px) {
+  .form-control-group {
+    display: flex;
+    flex-direction: column;
+  }
+  .form-control-group > * {
+    width: auto;
+    margin-bottom: 5px;
+  }
+}
+
+.form-control {
+  font-size: 16px;
+  padding: 10px;
+  border: 0;
+  border-radius: 5px;
+  min-height: 30px;
+}
+
+.money-amount {
+  padding: 5px 20px;
+}
+
+.money-amount:read-only {
+  background-color: #e6e6e0;
+  pointer-events: none;
+}
+.money-amount:read-only:hover {
+  cursor: not-allowed;
+}
+
+#btnConvert {
+  font-size: 24px;
+  width: 100%;
+  height: 45px;
+  border-radius: 5px;
+  border: 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
