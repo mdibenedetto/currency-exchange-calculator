@@ -5,28 +5,58 @@ html {
 }
 body {
   font-family: "Montserrat", sans-serif;
-  background-color: #505562;
-  color: #fff;
+  /* background-color: #505562; */
+
   display: grid;
   justify-content: center;
   align-items: baseline;
   height: 100vh;
 }
 
+select,
+input,
+button {
+  outline-width: 1px;
+  outline-color: #f76b61;
+}
+
 select {
   width: 190px;
 }
 
-section > * {
+.container > * {
   padding: 5px;
-}
-
-section {
-  padding: 10px;
 }
 
 .container {
   background-color: #516bad;
+  color: #fff;
+  padding: 10px;
+}
+
+.title-header {
+  background: #51ad93;
+}
+.title-header h1 {
+  margin: 5px auto;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.row {
+  padding: 10px;
+}
+
+.form-control-group {
+  margin-top: 5px;
+}
+
+.form-control {
+  font-size: 16px;
+  padding: 10px;
+  border: 0;
+  border-radius: 5px;
+  min-height: 30px;
 }
 
 @media only screen and (max-device-width: 780px), (max-width: 780px) {
@@ -41,23 +71,16 @@ section {
   }
 }
 
-.form-control {
-  font-size: 16px;
-  padding: 10px;
-  border: 0;
-  border-radius: 5px;
-  min-height: 30px;
-}
-
 .money-amount {
   padding: 5px 20px;
 }
 
-.money-amount:read-only {
+.money-amount:disabled {
+  outline: none;
   background-color: #e6e6e0;
   pointer-events: none;
 }
-.money-amount:read-only:hover {
+.money-amount:disabled:hover {
   cursor: not-allowed;
 }
 
@@ -69,4 +92,52 @@ section {
   border: 0;
   font-size: 1.2rem;
   font-weight: bold;
+  background-color: #51ad93;
+  color: inherit;
+}
+
+/* Page loader */
+.loader-container {
+  display: none;
+}
+body[data-loading="true"] .loader-container {
+  background-color: #c8dde4;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  opacity: 0.5;
+  z-index: 1000;
+}
+
+body[data-loading="true"] .loader {
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }

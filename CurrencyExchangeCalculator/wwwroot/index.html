@@ -6,11 +6,13 @@
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
- 
+    <div class="loader-container">
+        <div class="loader"></div>
+      </div>
 
-    <section class="container">
+    <main class="container">
 
-      <header>         
+      <header class="title-header">         
          <h1>Currency Converter</h1>         
        </header>
 
@@ -190,14 +192,14 @@
             <option value="yer">Yemeni rial</option>
             <option value="zmw">Zambian kwacha</option>
           </select>
-          <input id="result" readonly class="money-amount form-control"> </output>
+          <input id="result" disabled class="money-amount form-control"> </output>
         </div>
       </section>
 
       <section class = "row">
         <button id="btnConvert">Convert</button>
       </section>
-    </section>
+    </main>
 
 
 
@@ -211,12 +213,21 @@
       btnConvert.addEventListener("click", convert);
 
       async function convert() {
+        document.body.setAttribute("data-loading", "true");
+
         const URL = "/api/currency-exchange-calculator";
         const params = `?amount=${txtAmount.value}&baseCurrency=${ddBaseCurrency.value}&targetCurrency=${ddTargetCurrency.value}`;
 
-        const data = await fetch(URL + params).then((res) => res.json());
-        console.log(data);
-        result.innerHTML = JSON.stringify(data);
+        try{
+            const data = await fetch(URL + params).then((res) => res.json());
+            console.log(data);
+            result.innerHTML = JSON.stringify(data);
+        }catch(ex){
+            alert("The service 'Exchange Calculator' is unavailable right.\nPlase try later.");
+            console.log(ex);
+        }finally{
+            document.body.removeAttribute("data-loading");
+        }
       }
     </script>
   </body>
