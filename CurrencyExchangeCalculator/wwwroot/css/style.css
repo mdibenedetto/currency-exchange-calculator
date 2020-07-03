@@ -29,11 +29,12 @@ section {
   background-color: #516bad;
 }
 
-@media only screen and (max-device-width: 780px) {
+@media only screen and (max-device-width: 780px), (max-width: 780px) {
   .form-control-group {
     display: flex;
     flex-direction: column;
   }
+
   .form-control-group > * {
     width: auto;
     margin-bottom: 5px;
