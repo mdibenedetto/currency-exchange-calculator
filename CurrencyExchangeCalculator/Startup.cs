@@ -46,6 +46,9 @@ namespace CurrencyExchangeCalculator
             {
                 endpoints.MapControllers();
             });
+
+            app.UseDefaultFiles();
+            app.UseStaticFiles();
         }
     }
 }
