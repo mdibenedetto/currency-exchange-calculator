@@ -1,25 +1,52 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+
+import {
+  Loader,
+  CurrencySelector,
+  ButtonConverter,
+} from './components';
+
+import baseCurrencyList from './data/base-currency-list.json';
+import targetCurrencyList from './data/target-currency-list.json';
+import { calculateExchange } from './model/Calculator';
+
 
 function App() {
+
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Loader />
+
+      <main className="container">
+        <header className="title-header">
+          <h1>Currency Converter</h1>
+        </header>
+
+        <section className="row">
+          <CurrencySelector
+            id="ddBaseCurrency"
+            currencyList={baseCurrencyList}
+            label="Currency I have"
+          />
+        </section>
+
+        <section className="row">
+          <CurrencySelector
+            id="ddTargetCurrency"
+            currencyList={targetCurrencyList}
+            label="Currency I want"
+            disabled
+          />
+        </section>
+
+        <section className="row">
+          <ButtonConverter onClick={() => calculateExchange(1.2, "", "")} />
+        </section>
+
+      </main>
+    </>
   );
 }
 

@@ -1,0 +1,12 @@
+[
+  { "code": "eur", "desc": "Euro" },
+  { "code": "usd", "desc": "U.S. Dollar" },
+  { "code": "gbp", "desc": "U.K. Pound Sterling" },
+  { "code": "aud", "desc": "Australian Dollar" },
+  { "code": "cad", "desc": "Canadian Dollar" },
+  { "code": "jpy", "desc": "Japanese Yen" },
+  { "code": "chf", "desc": "Swiss Franc" },
+  { "code": "cny", "desc": "Chinese Yuan" },
+  { "code": "hkd", "desc": "Hong Kong Dollar" },
+  { "code": "twd", "desc": "New Taiwan Dollar" }
+]
