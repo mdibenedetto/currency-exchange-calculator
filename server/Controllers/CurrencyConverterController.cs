@@ -3,15 +3,26 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using CurrencyExchangeCalculator.Model;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace CurrencyExchangeCalculator.Controllers
 {
+   
     [Route("api/currency-exchange-calculator")]
     public class CurrencyConverterController : Controller
-    {           
+    {
+
+        //private readonly ILogger<CurrencyConverterResponse> _logger;
+
+        //public CurrencyConverterController(ILogger<CurrencyConverterResponse> logger) {
+        //{
+        //        _logger = logger;
+        // } 
+
         [HttpGet]      
         [Produces("application/json")]
         public IActionResult Get(
