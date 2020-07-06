@@ -129,3 +129,12 @@ The clien should show an alert message as shown below
 
 - Add unit testing both clien and server side
 - Add BDD testing both clien and server side
+
+## JSON API WEBSITE REFERENCE
+
+### JSON rate
+
+- http://www.floatrates.com/json-feeds.html
+- http://www.floatrates.com/daily/eur.json
+- http://www.floatrates.com/daily/usd.json
+- http://www.floatrates.com/daily/gbp.json

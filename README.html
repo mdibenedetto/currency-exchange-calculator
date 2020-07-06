@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Readme</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      img {
+        width: 25%;
+      }
+
+      main {
+        max-width: 900px;
+        margin: auto;
+        background: #ececec;
+        padding: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <!-- HTML generate from https://markdowntohtml.com/ -->
+      <h1 id="description">Description</h1>
+      <p>
+        This is simple currency exchange calculator. The calculator is composed
+        by 2 main layers, a server side applicatin built using ASP.NET Core and
+        a client built usind ReactJS.
+      </p>
+      <p>Details:</p>
+      <ol>
+        <li>
+          <p>
+            The API infinite number of defined currencies and their exchange
+            rates. The values are defined in the JSON file.
+          </p>
+        </li>
+        <li>
+          <p>
+            You can consume the API either with browser or with the React
+            application
+          </p>
+        </li>
+        <li>Allow user to enter the amount to exchange</li>
+        <li>Display the result.</li>
+      </ol>
+      <h1 id="nb-this-project-was-built-with-">
+        NB: This project was built with:
+      </h1>
+      <ul>
+        <li>MAC OS MACHINE</li>
+        <li>Visual Studio Community Edition</li>
+        <li>ASPNET CORE 3.1</li>
+        <li>VS CODE fo MacOS</li>
+        <li>Create-React-App CLI</li>
+      </ul>
+      <h1 id="basic-requirements">Basic Requirements</h1>
+      <h2 id="react-app">React-App</h2>
+      <ul>
+        <li>NodeJS</li>
+        <li>npm</li>
+      </ul>
+      <h2 id="aspnet">ASPNET</h2>
+      <ul>
+        <li>ASP.NET CORE 3.1</li>
+      </ul>
+      <h2 id="client-structure-folder">Client structure folder</h2>
+      <blockquote>
+        <p><img src="/docs/images/client-structure-folder.png" alt="alt" /></p>
+      </blockquote>
+      <h2 id="server-structure-folder">Server structure folder</h2>
+      <blockquote>
+        <p><img src="/docs/images/server-structure-folder.png" alt="alt" /></p>
+      </blockquote>
+      <h1 id="test-application">Test application</h1>
+      <h2 id="test-server-asp-net-webapi">Test Server ASP.NET WebApi</h2>
+      <ul>
+        <li>go to the folder <code>server</code></li>
+        <li>start <strong>Visual Studio project</strong></li>
+        <li>run the project</li>
+        <li>
+          in your browser, go to the url <code>http://localhost:54128</code>
+        </li>
+      </ul>
+      <p>
+        A default page <code>index.html</code> is shown to help testing the WEB
+        API
+      </p>
+      <blockquote>
+        <p>
+          <img src="/docs/images/web-api-test-browser-index.png" alt="alt" />
+        </p>
+      </blockquote>
+      <p>The page shows links to test 3 use cases:</p>
+      <ul>
+        <li>One link to test the WEB API using slash separated params</li>
+        <li>One link to test the WEB API using url query params</li>
+        <li>One link to test the WEB API using a bad formatted request</li>
+      </ul>
+      <h2 id="sample-response">Sample response</h2>
+      <ul>
+        <li>
+          <p>Slash separated params - 20eur to usd:</p>
+          <p>
+            <a
+              href="http://localhost:54128/api/currency-exchange-calculator?amount=20&amp;baseCurrency=eur&amp;targetCurrency=usd"
+              >http://localhost:54128/api/currency-exchange-calculator?amount=20&amp;baseCurrency=eur&amp;targetCurrency=usd</a
+            >
+          </p>
+        </li>
+      </ul>
+      <blockquote>
+        <p>
+          <img src="/docs/images/response-browser-query-param.png" alt="alt" />
+        </p>
+      </blockquote>
+      <ul>
+        <li>Url query params - 20usd to eur:</li>
+      </ul>
+      <p>
+        <a
+          href="http://localhost:54128/api/currency-exchange-calculator/amount/20/baseCurrency/usd/"
+          >http://localhost:54128/api/currency-exchange-calculator/amount/20/baseCurrency/usd/</a
+        >
+      </p>
+      <blockquote>
+        <p>
+          <img src="/docs/images/response-browser-slash-param.png" alt="alt" />
+        </p>
+      </blockquote>
+      <ul>
+        <li>Bad formatted request - FAIL REQUEST</li>
+      </ul>
+      <p>
+        <a
+          href="http://localhost:54128/api/currency-exchange-calculator?amount=20&amp;baseCurrency=eur&amp;targetCurrency=BAD_TARGET"
+          >http://localhost:54128/api/currency-exchange-calculator?amount=20&amp;baseCurrency=eur&amp;targetCurrency=BAD_TARGET</a
+        >
+      </p>
+      <blockquote>
+        <p><img src="/docs/images/response-browser-fail.png" alt="alt" /></p>
+      </blockquote>
+      <h2 id="test-client-react-app">Test Client React App</h2>
+      <ul>
+        <li>go to the folder <code>client</code></li>
+        <li>
+          use an Ide of your choice or just open the folder with your
+          <code>terminal</code> app
+        </li>
+        <li>
+          first time you need to install the project dependencies, to do that
+          run the command <code>npm i</code>
+        </li>
+        <li>
+          next step require to start the client app by using the command
+          <code>npm star</code>
+        </li>
+        <li>
+          the command will open the broweset so that you can test the app to the
+          url
+          <code>http://localhost:3000/</code>
+        </li>
+      </ul>
+      <p>The react app display the index.html</p>
+      <blockquote>
+        <p><img src="/docs/images/react-client-before.png" alt="alt" /></p>
+      </blockquote>
+      <p>
+        From this page you can select the base currency, the amount to convert
+        and the target currecy to use as reference for the desired conversion.
+      </p>
+      <h2 id="sample-response">Sample response</h2>
+      <h3 id="sample-1">Sample - 1</h3>
+      <p>Lets say we choose:</p>
+      <ul>
+        <li>Base currency = eur</li>
+        <li>Amount - 10</li>
+        <li>Target currency - usd</li>
+      </ul>
+      <p>The clien should show a response as shown below</p>
+      <blockquote>
+        <p><img src="/docs/images/react-client-after.png" alt="alt" /></p>
+      </blockquote>
+      <h3 id="sample-2">Sample - 2</h3>
+      <p>
+        Lets say that for any reason the server web api is not working or simply
+        we forgot to run the server.
+      </p>
+      <p>The clien should show an alert message as shown below</p>
+      <blockquote>
+        <p><img src="/docs/images/react-client-fail-server.png" alt="alt" /></p>
+      </blockquote>
+      <h3 id="sample-3">Sample - 3</h3>
+      <h4 id="smart-device-view">Smart device view</h4>
+      <blockquote>
+        <p><img src="/docs/images/smart-device-view.png" alt="alt" /></p>
+      </blockquote>
+      <h1 id="todo">TODO</h1>
+      <h2 id="functionalities">Functionalities</h2>
+      <ul>
+        <li>
+          Add a server side proxy to call a real API which provide currency rate
+          in real time
+        </li>
+        <li>
+          Add a functional to invert BASE CURRENCY to TARGET CURRENCY and
+          vice-versa
+        </li>
+      </ul>
+      <h2 id="testing">Testing</h2>
+      <ul>
+        <li>Add unit testing both clien and server side</li>
+        <li>Add BDD testing both clien and server side</li>
+      </ul>
+      <h2 id="json-api-website-reference">JSON API WEBSITE REFERENCE</h2>
+      <h3 id="json-rate">JSON rate</h3>
+      <ul>
+        <li>
+          <a href="http://www.floatrates.com/json-feeds.html"
+            >http://www.floatrates.com/json-feeds.html</a
+          >
+        </li>
+        <li>
+          <a href="http://www.floatrates.com/daily/eur.json"
+            >http://www.floatrates.com/daily/eur.json</a
+          >
+        </li>
+        <li>
+          <a href="http://www.floatrates.com/daily/usd.json"
+            >http://www.floatrates.com/daily/usd.json</a
+          >
+        </li>
+        <li>
+          <a href="http://www.floatrates.com/daily/gbp.json"
+            >http://www.floatrates.com/daily/gbp.json</a
+          >
+        </li>
+      </ul>
+    </main>
+  </body>
+</html>
