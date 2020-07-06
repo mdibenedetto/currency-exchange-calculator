@@ -6,6 +6,7 @@
     <base target="_blank" href="" />
     <style>
 
+
         ul li {
             padding: 5px;
         }
@@ -19,27 +20,33 @@
     </h1>
     <ul>
         <li>
-            <strong>
-                [SUCCESS]- 20usd to eur:
-            </strong>
+            <div>
+                <strong>
+                    [SUCCESS]- 20usd to eur:
+                </strong>
+            </div>
             <a href="/api/currency-exchange-calculator/amount/20/baseCurrency/usd/targetCurrency/eur">
-                 /api/currency-exchange-calculator/amount/20/baseCurrency/usd/targetCurrency/eur
+                /api/currency-exchange-calculator/amount/20/baseCurrency/usd/targetCurrency/eur
             </a>
         </li>
         <li>
-            <strong>
-                [SUCCESS]- 20eur to usd:
-            </strong>
+            <div>
+                <strong>
+                    [SUCCESS]- 20eur to usd:
+                </strong>
+            </div>
             <a href="/api/currency-exchange-calculator?amount=20&baseCurrency=eur&targetCurrency=usd">
-                 /api/currency-exchange-calculator?amount=20&baseCurrency=eur&targetCurrency=usd
+                /api/currency-exchange-calculator?amount=20&baseCurrency=eur&targetCurrency=usd
             </a>
         </li>
         <li>
-            <strong>
-                [FAIL] - 20eur to BAD_TARGET:
-            </strong>
+            <div>
+                <strong>
+                    [FAIL] - 20eur to BAD_TARGET:
+                </strong>
+            </div>
             <a href="/api/currency-exchange-calculator?amount=20&baseCurrency=eur&targetCurrency=usd">
-              /api/currency-exchange-calculator?amount=20&baseCurrency=eur&targetCurrency=BAD_TARGET
+                /api/currency-exchange-calculator?amount=20&baseCurrency=eur&targetCurrency=BAD_TARGET
             </a>
         </li>
     </ul>
