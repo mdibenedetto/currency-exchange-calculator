@@ -23,7 +23,12 @@ namespace CurrencyExchangeCalculator.Controllers
         //        _logger = logger;
         // } 
 
-        [HttpGet]      
+        // TEST-1.1 [SUCCESS]:http://localhost:54128/api/currency-exchange-calculator/amount/20/baseCurrency/usd/targetCurrency/eur
+        // TEST-1.2 [SUCCESS]: http://localhost:54128/api/currency-exchange-calculator?amount=20&baseCurrency=eur&targetCurrency=usd
+        // TEST-2 [FAIL]: http://localhost:54128/api/currency-exchange-calculator?amount=20&baseCurrency=eur&targetCurrency=BAD_TARGET
+
+        [HttpGet()] // to accept query string format params
+        [HttpGet("amount/{amount}/baseCurrency/{baseCurrency}/targetCurrency/{targetCurrency}")]
         [Produces("application/json")]
         public IActionResult Get(
             double amount,
