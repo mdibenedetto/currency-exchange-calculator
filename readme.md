@@ -21,8 +21,9 @@
 
 ## Test Server ASP.NET WebApi
 
-- start Visual Studio project
-- run project
+- go to the folder `server`
+- start **Visual Studio project**
+- run the project
 - go to the browswer `http://localhost:54128`
 
 A default page index.html is shown to help to test the WEB API
@@ -50,3 +51,37 @@ The page allow to test 3 use cases:
 ![alt](/docs/images/response-browser-fail.png)
 
 ## Test Client React App
+
+- go to the folder `client`
+- use an Ide of your choice or just open the folder with your `terminal` app
+- first time you need to install the project dependencies, to do that run the command `npm i`
+- next step require to start the client app by using the command `npm star`
+- the command will open the broweset so that you can test the app to the url `http://localhost:3000/`
+
+The react app display the index.html
+
+![alt](/docs/images/react-client-before.png)
+
+From this page you can select the base currency, the amount to convert and the target currecy to use as reference for the desired conversion.
+
+## Sample response
+
+### Sample - 1
+
+Lets say we choose:
+
+- Base currency = eur
+- Amount - 10
+- Target currency - usd
+
+The clien should show a response as shown below
+
+![alt](/docs/images/react-client-after.png)
+
+### Sample - 2
+
+Lets say that for any reason the server web api is not working or simply we forgot to run the server.
+
+The clien should show an alert message as shown below
+
+![alt](/docs/images/react-client-fail-server.png)
