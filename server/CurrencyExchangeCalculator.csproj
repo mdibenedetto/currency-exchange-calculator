@@ -12,6 +12,26 @@
   </ItemGroup>
   <ItemGroup>
     <Content Remove="wwwroot\index.html" />
+    <Content Remove="wwwroot\data\rates\jpy.json" />
+    <Content Remove="wwwroot\data\rates\usd.json" />
+    <Content Remove="wwwroot\data\rates\aud.json" />
+    <Content Remove="wwwroot\data\rates\chf.json" />
+    <Content Remove="wwwroot\data\rates\cny.json" />
+    <Content Remove="wwwroot\data\rates\twd.json" />
+    <Content Remove="wwwroot\data\rates\cad.json" />
+    <Content Remove="wwwroot\data\rates\hkd.json" />
+    <Content Remove="wwwroot\data\rates\eur.json" />
+    <Content Remove="wwwroot\data\rates\gbp.json" />
+    <Content Remove="wwwroot\data\rates\aud.json" />
+    <Content Remove="wwwroot\data\rates\cad.json" />
+    <Content Remove="wwwroot\data\rates\chf.json" />
+    <Content Remove="wwwroot\data\rates\usd.json" />
+    <Content Remove="wwwroot\data\rates\gbp.json" />
+    <Content Remove="wwwroot\data\rates\eur.json" />
+    <Content Remove="wwwroot\data\rates\hkd.json" />
+    <Content Remove="wwwroot\data\rates\twd.json" />
+    <Content Remove="wwwroot\data\rates\jpy.json" />
+    <Content Remove="wwwroot\data\rates\cny.json" />
   </ItemGroup>
   <ItemGroup>
     <None Include="wwwroot\index.html" />

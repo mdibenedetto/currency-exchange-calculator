@@ -115,6 +115,7 @@ body[data-loading="true"] .loader-container {
   justify-content: center;
   align-items: center;
   position: absolute;
+  left: 0;
   top: 0;
   opacity: 0.5;
   z-index: 1000;

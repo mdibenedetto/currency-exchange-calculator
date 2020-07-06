@@ -11,17 +11,19 @@ using Microsoft.Extensions.Logging;
 
 namespace CurrencyExchangeCalculator.Controllers
 {
-   
+ 
+
     [Route("api/currency-exchange-calculator")]
     public class CurrencyConverterController : Controller
     {
 
-        //private readonly ILogger<CurrencyConverterResponse> _logger;
+        private readonly ILogger _logger;
 
-        //public CurrencyConverterController(ILogger<CurrencyConverterResponse> logger) {
-        //{
-        //        _logger = logger;
-        // } 
+        public CurrencyConverterController(ILogger<CurrencyConverterController> logger)
+        {
+            _logger = logger;
+        }
+         
 
         // TEST-1.1 [SUCCESS]:http://localhost:54128/api/currency-exchange-calculator/amount/20/baseCurrency/usd/targetCurrency/eur
         // TEST-1.2 [SUCCESS]: http://localhost:54128/api/currency-exchange-calculator?amount=20&baseCurrency=eur&targetCurrency=usd
@@ -35,24 +37,25 @@ namespace CurrencyExchangeCalculator.Controllers
             String baseCurrency,
             String targetCurrency)
         {
+            _logger.LogInformation($"[START] Search Params: amount:{amount}; baseCurrency:${baseCurrency}; targetCurrency: {targetCurrency};");
 
             var errors = CurrencyValidator.ValidateInput(baseCurrency, targetCurrency);
+
             if (errors.Count() == 0)
             {
                 CurrencyManager converter = new CurrencyManager();
                 CurrencyConverterResponse res = new CurrencyConverterResponse();
                 res.conversion = converter.Convert(amount, baseCurrency, targetCurrency);
 
+                _logger.LogInformation($"[END] conversion:{res.conversion};");
+
                 return Ok(res);
             }
             else
             {
-                return BadRequest(new { errors }); 
+                return BadRequest(new { errors });
             }
-                      
-        }
-
- 
+        } 
      
     }
 }

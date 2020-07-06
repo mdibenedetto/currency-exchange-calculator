@@ -8,7 +8,7 @@ import {
 
 import baseCurrencyList from './data/base-currency-list.json';
 import targetCurrencyList from './data/target-currency-list.json';
-import { calculateExchange } from './model/Calculator';
+import { calculateExchange } from './model/calculate-exchange';
 
 
 function App() {

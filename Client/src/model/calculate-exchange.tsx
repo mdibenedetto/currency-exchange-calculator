@@ -31,7 +31,7 @@ export async function calculateExchange(
         }
     } catch (ex) {
         alert(
-            "The service 'Exchange Calculator' is unavailable right." +
+            "The service 'Exchange Calculator' is unavailable right now." +
             "\nPlase try later."
         );
         console.error(ex);
