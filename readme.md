@@ -120,7 +120,7 @@ The clien should show an alert message as shown below
 
 # TODO
 
-## Functional
+## Functionalities
 
 - Add a server side proxy to call a real API which provide currency rate in real time
 - Add a functional to invert BASE CURRENCY to TARGET CURRENCY and vice-versa
