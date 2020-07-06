@@ -1,3 +1,15 @@
+# Description
+
+This is simple currency exchange calculator. The calculator is composed by 2 main layers, a server side applicatin built using ASP.NET Core and a client built usind ReactJS.
+
+Details:
+
+1. The API infinite number of defined currencies and their exchange rates. The values are defined in the JSON file.
+
+1. You can consume the API either with browser or with the React application
+1. Allow user to enter the amount to exchange
+1. Display the result.
+
 # NB: This project was built with:
 
 - MAC OS MACHINE
@@ -16,6 +28,14 @@
 ## ASPNET
 
 - ASP.NET CORE 3.1
+
+## Client structure folder
+
+> ![alt](/docs/images/client-structure-folder.png)
+
+## Server structure folder
+
+> ![alt](/docs/images/server-structure-folder.png)
 
 # Test application
 
@@ -91,3 +111,21 @@ Lets say that for any reason the server web api is not working or simply we forg
 The clien should show an alert message as shown below
 
 > ![alt](/docs/images/react-client-fail-server.png)
+
+### Sample - 3
+
+#### Smart device view
+
+> ![alt](/docs/images/smart-device-view.png)
+
+# TODO
+
+## Functional
+
+- Add a server side proxy to call a real API which provide currency rate in real time
+- Add a functional to invert BASE CURRENCY to TARGET CURRENCY and vice-versa
+
+## Testing
+
+- Add unit testing both clien and server side
+- Add BDD testing both clien and server side
