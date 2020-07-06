@@ -11,7 +11,7 @@ using Microsoft.Extensions.Logging;
 
 namespace CurrencyExchangeCalculator.Controllers
 {
- 
+
 
     [Route("api/currency-exchange-calculator")]
     public class CurrencyConverterController : Controller
@@ -23,11 +23,10 @@ namespace CurrencyExchangeCalculator.Controllers
         {
             _logger = logger;
         }
-         
 
-        // TEST-1.1 [SUCCESS]:http://localhost:54128/api/currency-exchange-calculator/amount/20/baseCurrency/usd/targetCurrency/eur
+        // TEST-1.1 [SUCCESS]: http://localhost:54128/api/currency-exchange-calculator/amount/20/baseCurrency/usd/targetCurrency/eur
         // TEST-1.2 [SUCCESS]: http://localhost:54128/api/currency-exchange-calculator?amount=20&baseCurrency=eur&targetCurrency=usd
-        // TEST-2 [FAIL]: http://localhost:54128/api/currency-exchange-calculator?amount=20&baseCurrency=eur&targetCurrency=BAD_TARGET
+        // TEST-2      [FAIL]: http://localhost:54128/api/currency-exchange-calculator?amount=20&baseCurrency=eur&targetCurrency=BAD_TARGET
 
         [HttpGet()] // to accept query string format params
         [HttpGet("amount/{amount}/baseCurrency/{baseCurrency}/targetCurrency/{targetCurrency}")]
@@ -55,7 +54,6 @@ namespace CurrencyExchangeCalculator.Controllers
             {
                 return BadRequest(new { errors });
             }
-        } 
-     
+        }
     }
 }

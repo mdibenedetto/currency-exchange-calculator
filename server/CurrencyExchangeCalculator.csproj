@@ -11,7 +11,6 @@
     <Folder Include="wwwroot\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Remove="wwwroot\index.html" />
     <Content Remove="wwwroot\data\rates\jpy.json" />
     <Content Remove="wwwroot\data\rates\usd.json" />
     <Content Remove="wwwroot\data\rates\aud.json" />
@@ -32,9 +31,7 @@
     <Content Remove="wwwroot\data\rates\twd.json" />
     <Content Remove="wwwroot\data\rates\jpy.json" />
     <Content Remove="wwwroot\data\rates\cny.json" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="wwwroot\index.html" />
+    <Content Remove="wwwroot\static-client-index.html" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
