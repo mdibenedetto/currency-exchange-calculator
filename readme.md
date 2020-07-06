@@ -1,4 +1,4 @@
-# NB: This project was built in the with:
+# NB: This project was built with:
 
 - MAC OS MACHINE
 - Visual Studio Community Edition
@@ -24,31 +24,37 @@
 - go to the folder `server`
 - start **Visual Studio project**
 - run the project
-- go to the browswer `http://localhost:54128`
+- in your browser, go to the url `http://localhost:54128`
 
-A default page index.html is shown to help to test the WEB API
+A default page `index.html` is shown to help testing the WEB API
 
-![alt](/docs/images/web-api-test-browser-index.png)
+> ![alt](/docs/images/web-api-test-browser-index.png)
 
-The page allow to test 3 use cases:
+The page shows links to test 3 use cases:
 
-- One link test the WEB API using slash separated params
-- One link test the WEB API using url query params
-- One link the WEB API using a bad formatted request
+- One link to test the WEB API using slash separated params
+- One link to test the WEB API using url query params
+- One link to test the WEB API using a bad formatted request
 
 ## Sample response
 
-- [SUCCESS REQUEST 1 - 20eur to usd: http://localhost:54128/api/currency-exchange-calculator?amount=20&baseCurrency=eur&targetCurrency=usd](http://localhost:54128/api/currency-exchange-calculator?amount=20&baseCurrency=eur&targetCurrency=usd)
+- Slash separated params - 20eur to usd:
 
-![alt](/docs/images/response-browser-query-param.png)
+  [http://localhost:54128/api/currency-exchange-calculator?amount=20&baseCurrency=eur&targetCurrency=usd](http://localhost:54128/api/currency-exchange-calculator?amount=20&baseCurrency=eur&targetCurrency=usd)
 
-- [SUCCESS REQUEST 2 - 20usd to eur: http://localhost:54128/api/currency-exchange-calculator/amount/20/baseCurrency/usd/](http://localhost:54128/api/currency-exchange-calculator/amount/20/baseCurrency/usd/)
+> ![alt](/docs/images/response-browser-query-param.png)
 
-![alt](/docs/images/response-browser-slash-param.png)
+- Url query params - 20usd to eur:
 
-- [FAIL REQUEST - http://localhost:54128/api/currency-exchange-calculator?amount=20&baseCurrency=eur&targetCurrency=BAD_TARGET](http://localhost:54128/api/currency-exchange-calculator?amount=20&baseCurrency=eur&targetCurrency=BAD_TARGET)
+[http://localhost:54128/api/currency-exchange-calculator/amount/20/baseCurrency/usd/](http://localhost:54128/api/currency-exchange-calculator/amount/20/baseCurrency/usd/)
 
-![alt](/docs/images/response-browser-fail.png)
+> ![alt](/docs/images/response-browser-slash-param.png)
+
+- Bad formatted request - FAIL REQUEST
+
+[http://localhost:54128/api/currency-exchange-calculator?amount=20&baseCurrency=eur&targetCurrency=BAD_TARGET](http://localhost:54128/api/currency-exchange-calculator?amount=20&baseCurrency=eur&targetCurrency=BAD_TARGET)
+
+> ![alt](/docs/images/response-browser-fail.png)
 
 ## Test Client React App
 
@@ -60,7 +66,7 @@ The page allow to test 3 use cases:
 
 The react app display the index.html
 
-![alt](/docs/images/react-client-before.png)
+> ![alt](/docs/images/react-client-before.png)
 
 From this page you can select the base currency, the amount to convert and the target currecy to use as reference for the desired conversion.
 
@@ -76,7 +82,7 @@ Lets say we choose:
 
 The clien should show a response as shown below
 
-![alt](/docs/images/react-client-after.png)
+> ![alt](/docs/images/react-client-after.png)
 
 ### Sample - 2
 
@@ -84,4 +90,4 @@ Lets say that for any reason the server web api is not working or simply we forg
 
 The clien should show an alert message as shown below
 
-![alt](/docs/images/react-client-fail-server.png)
+> ![alt](/docs/images/react-client-fail-server.png)
